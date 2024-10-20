@@ -1,0 +1,62 @@
+.profileCard {
+    width: 350px;
+    background-color: #ece6e6;
+    color: #1d1c1c;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid #ece6e6;
+}
+
+.userTextName {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.userText {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1d1c1c85;
+}
+
+.profileList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid #1c1a1a74;
+}
+
+.profileItem {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-right: 2px solid #1c1a1a74;
+}
+
+.profileItem:last-child {
+    border-right: none;
+}
+
+.profileItem span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1c1c;
+}
+
+.profileItem span:last-child {
+    font-weight: 700;
+
+}
