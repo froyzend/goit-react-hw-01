@@ -1,14 +1,19 @@
+import { useState, useEffect } from 'react';
+import Profile from './Profile';
+import { avatar, username, tag, location, stats } from './ProfileData.json';
+import FriendList from './FriendList';
+import friendsData from './friends.json';
+import './App.css';
 
-import { useState } from 'react'
-import  Profile from './Profile'
-import { avatar, username, tag, location, stats } from './ProfileData.json'
-import './App.css'
+function App() {
+  const [friends, setFriends] = useState([]);
 
+  useEffect(() => {
+    setFriends(friendsData); // Загружаем данные из JSON
+  }, []);
 
-function App() { 
   return (
     <>
-
       <Profile
         username={username}
         tag={tag}
@@ -16,8 +21,9 @@ function App() {
         avatar={avatar}
         stats={stats}
       />
+      <FriendList friends={friends} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
