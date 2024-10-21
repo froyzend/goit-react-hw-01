@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import Profile from './Profile/Profile';
-import FriendList from './Friends/FriendList';
-import TransactionHistory from './transaction/TransactionHistory';
-import ProfileData from './Profile/ProfileData.json';
-import friendsData from './Friends/friends.json'; 
-import transactions from './transaction/transaction.json';
+import Profile from './components/Profile/Profile';
+import FriendList from './components/Friends/FriendList';
+import TransactionHistory from './components/transaction/TransactionHistory';
+import ProfileData from './components/Profile/profileData.json';
+import friendsData from './components/Friends/friends.json'; 
+import transactions from './components/transaction/transaction.json';
 import './App.css';
 
 
