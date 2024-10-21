@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
-import Profile from './Profile';
-import { avatar, username, tag, location, stats } from './ProfileData.json';
-import FriendList from './FriendList';
-import friendsData from './friends.json';
+import Profile from './Profile/Profile';
+import FriendList from './Friends/FriendList';
+import TransactionHistory from './transaction/TransactionHistory';
+import ProfileData from './Profile/ProfileData.json';
+import friendsData from './Friends/friends.json'; 
+import transactions from './transaction/transaction.json';
 import './App.css';
+
 
 function App() {
   const [friends, setFriends] = useState([]);
 
   useEffect(() => {
-    setFriends(friendsData); // Загружаем данные из JSON
+    setFriends(friendsData);
   }, []);
-
+  const { username, tag, location, avatar, stats } = ProfileData;
   return (
     <>
       <Profile
@@ -22,7 +25,10 @@ function App() {
         stats={stats}
       />
       <FriendList friends={friends} />
+      
+      <TransactionHistory items={transactions} />
     </>
+    
   );
 }
 
