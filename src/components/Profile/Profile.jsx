@@ -1,10 +1,11 @@
 import css from './Profile.module.css';
-import React from 'react';
-const Profile = ({ username, tag, location, avatar, stats }) => {
-    return (
+
+
+
+const Profile = ({name, avatar, tag, location, stats}) => (
         <div className={css.profileCard}>
             <img className={css.avatar} src={avatar} alt="User avatar" />
-            <p className={css.userTextName}>{username}</p>
+            <p className={css.userTextName}>{name}</p>
             <p className={css.userText}>@{tag}</p>
             <p className={css.userText}>{location}</p>
             <ul className={css.profileList}>
@@ -23,7 +24,5 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
             </ul>
         </div>
     );
-};
 
 export default Profile;
-

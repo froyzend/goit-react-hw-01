@@ -1,0 +1,11 @@
+.friendStatus {
+    font-weight: bold;
+}
+
+.friendStatusOnline {
+    color: green;
+}
+
+.friendStatusOffline {
+    color: red;
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import css from './TransactionHistory.module.css'; // Импортируем CSS-модуль
+
+import css from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
     return (

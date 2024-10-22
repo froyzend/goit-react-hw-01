@@ -14,15 +14,3 @@
     border-radius: 10px;
     padding: 10px;
 }
-
-.friendStatus {
-    font-weight: bold;
-}
-
-.friendStatusOnline {
-    color: green;
-}
-
-.friendStatusOffline {
-    color: red;
-}

@@ -1,28 +1,22 @@
-import { useState, useEffect } from 'react';
 import Profile from './components/Profile/Profile';
 import FriendList from './components/Friends/FriendList';
 import TransactionHistory from './components/transaction/TransactionHistory';
 import ProfileData from './components/Profile/profileData.json';
-import friendsData from './components/Friends/friends.json'; 
+import FriendsData from './components/Friends/friends.json'; 
 import transactions from './components/transaction/transaction.json';
 import './App.css';
 
 
 function App() {
-  const [friends, setFriends] = useState([]);
-
-  useEffect(() => {
-    setFriends(friendsData);
-  }, []);
-  const { username, tag, location, avatar, stats } = ProfileData;
+  const friends = FriendsData;
   return (
     <>
       <Profile
-        username={username}
-        tag={tag}
-        location={location}
-        avatar={avatar}
-        stats={stats}
+        name={ProfileData.username}
+        tag={ProfileData.tag}
+        location={ProfileData.location}
+        avatar={ProfileData.avatar}
+        stats={ProfileData.stats}
       />
       <FriendList friends={friends} />
       
